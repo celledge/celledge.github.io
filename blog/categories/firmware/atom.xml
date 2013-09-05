@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Four Bits Per Nybble]]></title>
-  <link href="http://celledge.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Firmware | Four Bits Per Nybble]]></title>
+  <link href="http://celledge.github.io/blog/categories/firmware/atom.xml" rel="self"/>
   <link href="http://celledge.github.io/"/>
   <updated>2013-09-04T22:51:46-04:00</updated>
   <id>http://celledge.github.io/</id>
