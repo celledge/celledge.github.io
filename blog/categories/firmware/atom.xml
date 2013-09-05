@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Firmware | Four Bits Per Nybble]]></title>
-  <link href="http://celledge.github.io/blog/categories/firmware/atom.xml" rel="self"/>
-  <link href="http://celledge.github.io/"/>
-  <updated>2013-09-04T22:51:46-04:00</updated>
-  <id>http://celledge.github.io/</id>
+  <link href="http://chris.elledge.org/blog/categories/firmware/atom.xml" rel="self"/>
+  <link href="http://chris.elledge.org/"/>
+  <updated>2013-09-05T08:07:03-04:00</updated>
+  <id>http://chris.elledge.org/</id>
   <author>
     <name><![CDATA[Chris Elledge]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Treatise on Firmare Development]]></title>
-    <link href="http://celledge.github.io/blog/2013/09/04/a-treatise-on-firmare-development/"/>
+    <link href="http://chris.elledge.org/blog/2013/09/04/a-treatise-on-firmare-development/"/>
     <updated>2013-09-04T21:29:00-04:00</updated>
-    <id>http://celledge.github.io/blog/2013/09/04/a-treatise-on-firmare-development</id>
+    <id>http://chris.elledge.org/blog/2013/09/04/a-treatise-on-firmare-development</id>
     <content type="html"><![CDATA[<p>I plan to write several articles on the core concepts of firmware
 development and move into more advanced topics. For the simple
 concepts I will probably be mostly referring to AVR processors due to

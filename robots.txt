@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://celledge.github.io/sitemap.xml 
+Sitemap: http://chris.elledge.org/sitemap.xml 
