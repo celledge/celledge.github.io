@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "micro-controller-architecture-102"
+title: "Micro-Controller Architecture 102"
 date: 2013-09-08 08:37
 comments: true
 categories: Firmware
