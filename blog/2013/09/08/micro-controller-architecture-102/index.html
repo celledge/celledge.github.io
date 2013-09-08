@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Micro-Controller Architecture 101 - Four Bits Per Nybble</title>
+  <title>micro-controller-architecture-102 - Four Bits Per Nybble</title>
   <meta name="author" content="Chris Elledge">
 
   
-  <meta name="description" content="Modern micro-controllers are basically Systems on a Chip (SOC) with
-memory integrated into the package as well. The lack of external
-memory buses &hellip;">
+  <meta name="description" content="In addition to the Flash and RAM on the micro-controller, there is a
+chunk of address space dedicated to the peripheral registers. These
+registers &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ memory buses &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chris.elledge.org/blog/2013/09/05/micro-controller-architecture-101">
+  <link rel="canonical" href="http://chris.elledge.org/blog/2013/09/08/micro-controller-architecture-102">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Four Bits Per Nybble" type="application/atom+xml">
@@ -82,7 +82,7 @@ memory buses &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Micro-Controller Architecture 101</h1>
+      <h1 class="entry-title">Micro-controller-architecture-102</h1>
     
     
       <p class="meta">
@@ -98,46 +98,58 @@ memory buses &hellip;">
   
 
 
-<time datetime="2013-09-05T21:35:00-04:00" pubdate data-updated="true">Sep 5<span>th</span>, 2013</time>
+<time datetime="2013-09-08T08:37:00-04:00" pubdate data-updated="true">Sep 8<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Modern micro-controllers are basically Systems on a Chip (SOC) with
-memory integrated into the package as well. The lack of external
-memory buses allows for smaller packages and pin counts. It also
-greatly simplifies the use of these parts.</p>
+<div class="entry-content"><p>In addition to the Flash and RAM on the micro-controller, there is a
+chunk of address space dedicated to the peripheral registers. These
+registers provide the interface to all the peripherals which are
+probably the reason that you chose the mirco-controller. There are two
+ways that the peripheral registers can be addressed. The first is via
+memory access. Usually there is a dedicated hole in the memory space
+which addresses these registers instead of RAM. That means that load
+and store instructions to these addresses will handle reading and
+writing to the peripheral registers.</p>
 
-<p>Many smaller micros (PIC16, PIC24, AVR) are setup in what is known as
-the Harvard Architecture. This means that the executable memory and
-data memory are completely separated. Instructions cannot be executed
-from the data memory, and the different memory sections can be
-addressed in completely different ways.</p>
+<p>The second approach is via special instructions. The AVR uses this
+approach to access the lowest registers. The intention is for these to
+be the most commonly used ones, but it never seems to work out that
+way. The limited number of registers that can be accessed this way is
+because there are only a few bits available in the opcode to act as
+addressing for the instruction. In order to access all the other
+registers, they must be addressed by the first approach. On the AVR
+this method only take one instruction while the first can take 3. Two
+instructions to setup an address pointer and one for the load or store
+immediate. Thankfully, the gcc compiler will handle figuring this one
+out for you.</p>
 
-<p>Usually the executable memory is on Flash or ROM (rarely now
-days). While the processor is able to directly fetch instructions from
-Flash, there is typically no way to directly read variables from
-it. Usually special retrieval instructions or address remapping are
-needed. Some compilers will automatically use the constructs for any
-constant variable reads.</p>
+<p>The small PICs have their own oddities as well. Instead of using 16
+bit addresses to access RAM, they rely on a concept of memory
+banks. In order to access memory, a bank has to be set which
+determines what memory can be addressed using the load and store
+instructions. For each bank, there is a chunk of addresses devoted to
+registers, followed by RAM, and a small chunk of common RAM. The
+common RAM is the only part that is the same no matter which bank is
+selected. Accessing memory that is all in the same bank is compact,
+but if several items need to be transfered between pages then a lot of
+instructions are wasted shuttling the values between banks.</p>
 
-<p>Furthermore, Flash and RAM don&rsquo;t even need to have the same line
-size. The PIC16F series has 14 bit instruction lines and 8 bit data
-lines. The PIC24F series has 24 bit instruction lines and 16 bit data
-lines. The AVR has 16 bit instruction lines and 8 bit data lines. The
-odd flash word sizes can often make constant storage complicated. The
-compilers for the two PICs usually store constants in just the bottom
-8 or 16 bits of a line thus wasting big chunks of Flash if you use
-lots of constants. If you want to make full use of the storage, you
-must use the Flash peripheral registers instead of the simpler address
-remapping that the compiler uses. While the alignments are much
-cleaner on the AVR, all Flash data reads have to be done with a
-special load instruction. So it falls in between the two PIC methods in
-complexity.</p>
-
-<p>Details on these operations are a topic for a future post. Next time I will cover Peripheral Registers, Flash Pages, and Memory Banks.</p>
+<p>Typically Flash is read only by the instruction fetcher based off of
+the program counter. However when writing to Flash you often need to
+consider that it is composed of what are known as blocks and pages. A
+block is a chunk of Flash memory which has to be erased as one unit. A
+page is a piece of Flash which has to be written as one
+unit. Typically a block contains more than one page. If you never plan
+on writing self modifying code (bootloaders) then you will probably
+never need to worry about this. But if you need to change portions of
+the Flash you will need to handle erasing at the block level and
+writing at the page level. If you wish to modify only parts of the
+Flash, then you will have to store the previous values, erase the
+block, and rewrite all the pages.</p>
 </div>
 
 
@@ -160,7 +172,7 @@ complexity.</p>
   
 
 
-<time datetime="2013-09-05T21:35:00-04:00" pubdate data-updated="true">Sep 5<span>th</span>, 2013</time>
+<time datetime="2013-09-08T08:37:00-04:00" pubdate data-updated="true">Sep 8<span>th</span>, 2013</time>
       
 
 <span class="categories">
@@ -174,7 +186,7 @@ complexity.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://chris.elledge.org/blog/2013/09/05/micro-controller-architecture-101/" data-via="nybblefourbits" data-counturl="http://chris.elledge.org/blog/2013/09/05/micro-controller-architecture-101/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://chris.elledge.org/blog/2013/09/08/micro-controller-architecture-102/" data-via="nybblefourbits" data-counturl="http://chris.elledge.org/blog/2013/09/08/micro-controller-architecture-102/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -187,10 +199,8 @@ complexity.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/09/04/a-treatise-on-firmare-development/" title="Previous Post: A Treatise on Firmare Development">&laquo; A Treatise on Firmare Development</a>
+        <a class="basic-alignment left" href="/blog/2013/09/05/micro-controller-architecture-101/" title="Previous Post: Micro-Controller Architecture 101">&laquo; Micro-Controller Architecture 101</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/09/08/micro-controller-architecture-102/" title="Next Post: micro-controller-architecture-102">micro-controller-architecture-102 &raquo;</a>
       
     </p>
   </footer>
