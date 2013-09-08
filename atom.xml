@@ -4,7 +4,7 @@
   <title><![CDATA[Four Bits Per Nybble]]></title>
   <link href="http://chris.elledge.org/atom.xml" rel="self"/>
   <link href="http://chris.elledge.org/"/>
-  <updated>2013-09-08T11:36:04-04:00</updated>
+  <updated>2013-09-08T11:38:44-04:00</updated>
   <id>http://chris.elledge.org/</id>
   <author>
     <name><![CDATA[Chris Elledge]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[micro-controller-architecture-102]]></title>
+    <title type="html"><![CDATA[Micro-Controller Architecture 102]]></title>
     <link href="http://chris.elledge.org/blog/2013/09/08/micro-controller-architecture-102/"/>
     <updated>2013-09-08T08:37:00-04:00</updated>
     <id>http://chris.elledge.org/blog/2013/09/08/micro-controller-architecture-102</id>
