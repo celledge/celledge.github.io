@@ -1,24 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Four Bits Per Nybble]]></title>
-  <link href="http://chris.elledge.org/atom.xml" rel="self"/>
-  <link href="http://chris.elledge.org/"/>
-  <updated>2013-09-21T10:48:45-04:00</updated>
-  <id>http://chris.elledge.org/</id>
-  <author>
-    <name><![CDATA[Chris Elledge]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Linux on H87M-E &amp; Haswell - Four Bits Per Nybble</title>
+  <meta name="author" content="Chris Elledge">
 
   
-  <entry>
-    <title type="html"><![CDATA[Linux on H87M-E &amp; Haswell]]></title>
-    <link href="http://chris.elledge.org/blog/2013/09/21/linux-on-h87m-e-and-haswell/"/>
-    <updated>2013-09-21T09:55:00-04:00</updated>
-    <id>http://chris.elledge.org/blog/2013/09/21/linux-on-h87m-e-and-haswell</id>
-    <content type="html"><![CDATA[<p>I wanted to write down my notes for getting Ubuntu Linux fully
+  <meta name="description" content="I wanted to write down my notes for getting Ubuntu Linux fully
+running on an Asus H87M-E with a Intel Haswell processor. I use this
+on a media center &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chris.elledge.org/blog/2013/09/21/linux-on-h87m-e-and-haswell">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Four Bits Per Nybble" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43752126-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Four Bits Per Nybble</a></h1>
+  
+    <h2>On Base Sixteen, Interrupts, and Arithmetic Shift Rights</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chris.elledge.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/blog/categories/firmware">Firmware</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Linux on H87M-E &amp; Haswell</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-21T09:55:00-04:00" pubdate data-updated="true">Sep 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I wanted to write down my notes for getting Ubuntu Linux fully
 running on an Asus H87M-E with a Intel Haswell processor. I use this
 on a media center, so I needed HDMI video and audio support.</p>
 
@@ -171,181 +259,166 @@ their temperature.</p>
 
 
 
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[ARM &amp; von Neumann]]></title>
-    <link href="http://chris.elledge.org/blog/2013/09/09/arm-and-von-neumann/"/>
-    <updated>2013-09-09T19:56:00-04:00</updated>
-    <id>http://chris.elledge.org/blog/2013/09/09/arm-and-von-neumann</id>
-    <content type="html"><![CDATA[<p>When the ARM architecture made its way into micro-controllers it also
-made the von Neumann architecture more common in firmware
-development. The main effect that this has is allowing execution of
-instructions from memory. The unified memory model allows jumping into
-Flash or RAM. Some processors even load the entire Flash into RAM
-before on boot and execute only from RAM. This allows for the
-potential to have self modifying code. Which while dangerous from a
-safety standpoint, allows for some cool tricks. Sometimes the RAM and
-Flash are different speeds which allows either faster execution when
-code is in RAM or a shallower pipeline to flush on branches. This
-architecture also means that data in Flash can be read as easily and
-often as quickly as from RAM and constant structures compile cleanly.</p>
 
-<p>Most ARM micro-controllers support using the ARM Thumb instruction set
-which is a subset of the ARM opcodes which only use 16 bits instead of
-the normal 32 bits. The reduced instruction set still provides all
-operations but limits the number of registers that can be accessed. It
-does sometimes require more instructions to do the same work, but for
-the most part the code density is much higher in Thumb mode. ARM thumb
-instructions can often have even higher density than 8 bit
-micro-controllers due to the ability to handle 32 bit math operations
-with a single operation.</p>
+<span class="byline author vcard">Posted by <span class="fn">Chris Elledge</span></span>
 
-<p>The addition of ARM also brings lots of options for compilers. GCC,
-LLVM, IAR, and several others provide varying levels of support for
-micro-controllers and various levels of optimization for the Thumb
-instruction set.</p>
-]]></content>
-  </entry>
+      
+
+
+
+
+
+
+
+
   
-  <entry>
-    <title type="html"><![CDATA[Micro-Controller Architecture 102]]></title>
-    <link href="http://chris.elledge.org/blog/2013/09/08/micro-controller-architecture-102/"/>
-    <updated>2013-09-08T08:37:00-04:00</updated>
-    <id>http://chris.elledge.org/blog/2013/09/08/micro-controller-architecture-102</id>
-    <content type="html"><![CDATA[<p>In addition to the Flash and RAM on the micro-controller, there is a
-chunk of address space dedicated to the peripheral registers. These
-registers provide the interface to all the peripherals which are
-probably the reason that you chose the mirco-controller. There are two
-ways that the peripheral registers can be addressed. The first is via
-memory access. Usually there is a dedicated hole in the memory space
-which addresses these registers instead of RAM. That means that load
-and store instructions to these addresses will handle reading and
-writing to the peripheral registers.</p>
 
-<p>The second approach is via special instructions. The AVR uses this
-approach to access the lowest registers. The intention is for these to
-be the most commonly used ones, but it never seems to work out that
-way. The limited number of registers that can be accessed this way is
-because there are only a few bits available in the opcode to act as
-addressing for the instruction. In order to access all the other
-registers, they must be addressed by the first approach. On the AVR
-this method only take one instruction while the first can take 3. Two
-instructions to setup an address pointer and one for the load or store
-immediate. Thankfully, the gcc compiler will handle figuring this one
-out for you.</p>
 
-<p>The small PICs have their own oddities as well. Instead of using 16
-bit addresses to access RAM, they rely on a concept of memory
-banks. In order to access memory, a bank has to be set which
-determines what memory can be addressed using the load and store
-instructions. For each bank, there is a chunk of addresses devoted to
-registers, followed by RAM, and a small chunk of common RAM. The
-common RAM is the only part that is the same no matter which bank is
-selected. Accessing memory that is all in the same bank is compact,
-but if several items need to be transfered between pages then a lot of
-instructions are wasted shuttling the values between banks.</p>
+<time datetime="2013-09-21T09:55:00-04:00" pubdate data-updated="true">Sep 21<span>st</span>, 2013</time>
+      
 
-<p>Typically Flash is read only by the instruction fetcher based off of
-the program counter. However when writing to Flash you often need to
-consider that it is composed of what are known as blocks and pages. A
-block is a chunk of Flash memory which has to be erased as one unit. A
-page is a piece of Flash which has to be written as one
-unit. Typically a block contains more than one page. If you never plan
-on writing self modifying code (bootloaders) then you will probably
-never need to worry about this. But if you need to change portions of
-the Flash you will need to handle erasing at the block level and
-writing at the page level. If you wish to modify only parts of the
-Flash, then you will have to store the previous values, erase the
-block, and rewrite all the pages.</p>
-]]></content>
-  </entry>
+<span class="categories">
   
-  <entry>
-    <title type="html"><![CDATA[Micro-Controller Architecture 101]]></title>
-    <link href="http://chris.elledge.org/blog/2013/09/05/micro-controller-architecture-101/"/>
-    <updated>2013-09-05T21:35:00-04:00</updated>
-    <id>http://chris.elledge.org/blog/2013/09/05/micro-controller-architecture-101</id>
-    <content type="html"><![CDATA[<p>Modern micro-controllers are basically Systems on a Chip (SOC) with
-memory integrated into the package as well. The lack of external
-memory buses allows for smaller packages and pin counts. It also
-greatly simplifies the use of these parts.</p>
-
-<p>Many smaller micros (PIC16, PIC24, AVR) are setup in what is known as
-the Harvard Architecture. This means that the executable memory and
-data memory are completely separated. Instructions cannot be executed
-from the data memory, and the different memory sections can be
-addressed in completely different ways.</p>
-
-<p>Usually the executable memory is on Flash or ROM (rarely now
-days). While the processor is able to directly fetch instructions from
-Flash, there is typically no way to directly read variables from
-it. Usually special retrieval instructions or address remapping are
-needed. Some compilers will automatically use the constructs for any
-constant variable reads.</p>
-
-<p>Furthermore, Flash and RAM don&rsquo;t even need to have the same line
-size. The PIC16F series has 14 bit instruction lines and 8 bit data
-lines. The PIC24F series has 24 bit instruction lines and 16 bit data
-lines. The AVR has 16 bit instruction lines and 8 bit data lines. The
-odd flash word sizes can often make constant storage complicated. The
-compilers for the two PICs usually store constants in just the bottom
-8 or 16 bits of a line thus wasting big chunks of Flash if you use
-lots of constants. If you want to make full use of the storage, you
-must use the Flash peripheral registers instead of the simpler address
-remapping that the compiler uses. While the alignments are much
-cleaner on the AVR, all Flash data reads have to be done with a
-special load instruction. So it falls in between the two PIC methods in
-complexity.</p>
-
-<p>Details on these operations are a topic for a future post. Next time I will cover Peripheral Registers, Flash Pages, and Memory Banks.</p>
-]]></content>
-  </entry>
+    <a class='category' href='/blog/categories/linux/'>Linux</a>
   
-  <entry>
-    <title type="html"><![CDATA[A Treatise on Firmare Development]]></title>
-    <link href="http://chris.elledge.org/blog/2013/09/04/a-treatise-on-firmare-development/"/>
-    <updated>2013-09-04T21:29:00-04:00</updated>
-    <id>http://chris.elledge.org/blog/2013/09/04/a-treatise-on-firmare-development</id>
-    <content type="html"><![CDATA[<p>I plan to write several articles on the core concepts of firmware
-development and move into more advanced topics. For the simple
-concepts I will probably be mostly referring to AVR processors due to
-Atmel&rsquo;s freely available toolchain and their common use in Arduino
-designs. As I move into the more advanced concepts I will probably
-move on to other processors including various ARM processors.</p>
-
-<h3>Planned Core Concepts</h3>
-
-<ul>
-<li>Micro-controller Architectures</li>
-<li>Assembly and C Compilers</li>
-<li>Registers</li>
-<li>Common Peripherals</li>
-<li>Interrupts</li>
-</ul>
+</span>
 
 
-<h3>Planned Advanced Topics</h3>
-
-<ul>
-<li>Direct Memory Access</li>
-<li>Asynchronous Programming</li>
-<li>Real Time Operating Systems</li>
-<li>Power Management</li>
-<li>Fixed Point Math</li>
-</ul>
-
-
-<p>There are plenty of other resources for getting started with
-micro-controller programming for all kinds of chips, so I plan to skip
-any kind of introduction to coding in C and examples on getting
-started with a particular micro-controller. Instead I will mainly be
-going into the theory of operation on these topics in the hope that
-with that knowledge it will be easier to take the examples available
-in the wild and tame them to your needs. The intended audience is
-expected to have a software engineering background.</p>
-]]></content>
-  </entry>
+    </p>
+    
+      <div class="sharing">
   
-</feed>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://chris.elledge.org/blog/2013/09/21/linux-on-h87m-e-and-haswell/" data-via="nybblefourbits" data-counturl="http://chris.elledge.org/blog/2013/09/21/linux-on-h87m-e-and-haswell/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/09/09/arm-and-von-neumann/" title="Previous Post: ARM &amp; von Neumann">&laquo; ARM &amp; von Neumann</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>Chris Elledge is a Firmware Engineer who likes to dabble in a bit
+  of everything. If you have suggested material for me to cover here,
+  drop me a line on Twitter.</p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/21/linux-on-h87m-e-and-haswell/">Linux on H87M-E &amp; Haswell</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/09/arm-and-von-neumann/">ARM &amp; Von Neumann</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/micro-controller-architecture-102/">Micro-Controller Architecture 102</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/05/micro-controller-architecture-101/">Micro-Controller Architecture 101</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/04/a-treatise-on-firmare-development/">A Treatise on Firmare Development</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+<h1>Twitter</h1>
+<a class="twitter-timeline" href="https://twitter.com/nybblefourbits" data-widget-id="376790691109564417">Tweets by @nybblefourbits</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/101180454352570203194?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Chris Elledge -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

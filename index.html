@@ -9,9 +9,9 @@
   <meta name="author" content="Chris Elledge">
 
   
-  <meta name="description" content="When the ARM architecture made its way into micro-controllers it also
-made the von Neumann architecture more common in firmware
-development. The main &hellip;">
+  <meta name="description" content="I wanted to write down my notes for getting Ubuntu Linux fully
+running on an Asus H87M-E with a Intel Haswell processor. I use this
+on a media center &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,66 @@ development. The main &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/21/linux-on-h87m-e-and-haswell/">Linux on H87M-E &amp; Haswell</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-21T09:55:00-04:00" pubdate data-updated="true">Sep 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I wanted to write down my notes for getting Ubuntu Linux fully
+running on an Asus H87M-E with a Intel Haswell processor. I use this
+on a media center, so I needed HDMI video and audio support.</p>
+
+<ul>
+<li>Ubuntu 13.04 is required for support of the Haswell GPU.</li>
+<li>Linux kernel 3.10 is required for HDMI audio support.</li>
+<li>I used Upubuntu to install 3.10.7 for my system.</li>
+<li><a href="http://www.ocztechnologyforum.com/forum/showthread.php?111964-Vertex-2-Agility-2-and-Haswell">Never use an older (1200/1500 series) Sandforce Controller SSD with Haswell Motherboards</a>.</li>
+<li>The hardware controller is a NCT6791D. You will need a very recent
+version of the <a href="https://github.com/groeck/nct6775">nct6775 driver</a>. It will probably be merged in
+Linux 3.12.</li>
+<li>If you use Western Digital Green Drives on Linux be sure to look at
+<a href="http://idle3-tools.sourceforge.net/">idle3-tools</a>.</li>
+</ul>
+
+
+<p>Here is a script that I wrote to setup the fans in a way useful for my
+system. One fan sits on my HDs, so I wanted to regulate it based on
+their temperature.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/09/21/linux-on-h87m-e-and-haswell/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -380,6 +440,10 @@ expected to have a software engineering background.</p>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/21/linux-on-h87m-e-and-haswell/">Linux on H87M-E &amp; Haswell</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/09/09/arm-and-von-neumann/">ARM &amp; Von Neumann</a>
