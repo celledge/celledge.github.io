@@ -3,7 +3,7 @@ layout: post
 title: "ARM &amp; von Neumann"
 date: 2013-09-09 19:56
 comments: true
-categories: 
+categories: Firmware
 ---
 
 When the ARM architecture made its way into micro-controllers it also
